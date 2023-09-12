@@ -1,0 +1,13 @@
+import java.sql.Connection;
+import dao.Dao;
+
+public class App {
+
+	public static void main(String[] args) {
+		System.out.println(Dao.getStatusConexao());
+		Connection conexao = Dao.getConexao();
+		System.out.println(Dao.getStatusConexao());
+
+	}
+
+}

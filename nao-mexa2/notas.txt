@@ -7,3 +7,5 @@ Guia inferior -> Aba servers -> Tomcat -> (Botão direito) -> Properties -> Swit
 Guia inferior -> Aba servers -> Clicar no tomcat -> Use tomcat Instalation -> Ctrl + S
 
 Obs: Os passos 2 e 3 precisam ser feitos antes de startar o servidor pela segunda vez, se não, você terá de baixar o tomcat de novo.
+
+Pesquisar a estrutura MVC 

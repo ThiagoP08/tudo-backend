@@ -1,0 +1,5 @@
+package dao;
+
+public class TarefaDAO {
+	String SQL = "SELECT * FROM tarefasDB";
+}

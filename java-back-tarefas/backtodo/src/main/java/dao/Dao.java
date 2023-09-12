@@ -18,7 +18,7 @@ public class Dao {
 			
 			String serverName = "localhost:3306";
 			String dataBase = "tarefasDB";
-			String url = "jdbc:mysql//" + serverName + "/" + dataBase;
+			String url = "jdbc:mysql://" + serverName + "/" + dataBase;
 			String user = "root";
 			String password = "";
 			
@@ -27,7 +27,7 @@ public class Dao {
 			if(cnx != null) {
 				status = "STATUS ---> Conectado com sucesso!  ;D";
 			} else {
-				status = "STATUS ---> Não foi possivel realizar a conexão";
+				status = "STATUS ---> Não foi possivel realizar a conexão D:";
 			}
 				
 		} catch (ClassNotFoundException e) {
@@ -39,8 +39,17 @@ public class Dao {
 		return cnx;
 	}
 	
-	public static String statusConexao(){
+	public static String getStatusConexao(){
 		return status;
+	}
+	
+	public static boolean setFecharConexao() {
+		try {
+			Dao.getConexao().close();
+			return true;
+		} catch (SQLException e) {
+			return false;
+		}
 	}
 
 }
