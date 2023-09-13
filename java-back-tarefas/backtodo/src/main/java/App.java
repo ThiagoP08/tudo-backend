@@ -7,27 +7,43 @@ import model.Tarefa;
 
 public class App {
 
-	public static void main(String[] args) {
-		System.out.println(Dao.getStatusConexao());
-		Connection conexao = Dao.getConexao();
-		System.out.println(Dao.getStatusConexao());
-		
-		TarefaDAO dao = new TarefaDAO();
-		List<Tarefa> lista = dao.listar();
-		
-		
-		lista.forEach(tarefa -> System.out.println(tarefa.getDescricao()));
-		
-		Tarefa tarefa = new Tarefa();
-		tarefa.setDescricao("Estudar para a prova");
-		tarefa.setStatus(false);
-		
-		if(dao.incluir(tarefa)) {
-			System.out.println("Tarefa incuida com sucesso");
-		} else {
-			System.out.println("Tarefa não foi incluida");
-		}
+    public static void main(String[] args) {
+        System.out.println(Dao.getStatusConexao());
+        Connection conexao = Dao.getConexao();
+        System.out.println(Dao.getStatusConexao());
 
-	}
+        TarefaDAO dao = new TarefaDAO();
+        List<Tarefa> lista = dao.listar();
 
+        lista.forEach(tarefa -> System.out.println(tarefa.getDescricao()));
+
+        Tarefa novaTarefa = new Tarefa(); 
+        novaTarefa.setDescricao("Estudar para a prova");
+        novaTarefa.setStatus(false);
+
+        if (dao.incluir(novaTarefa)) { 
+            System.out.println("Tarefa incluída com sucesso");
+        } else {
+            System.out.println("Tarefa não foi incluída");
+        }
+
+        Tarefa tarefaEditar = new Tarefa(); 
+        tarefaEditar.setId(1);
+        tarefaEditar.setDescricao("Nova descrição");
+        tarefaEditar.setStatus(true);
+
+        if (dao.editar(tarefaEditar)) { 
+            System.out.println("Tarefa editada com sucesso");
+        } else {
+            System.out.println("Não foi possível editar a tarefa");
+        }
+
+        int idTarefaExcluir = 3;
+
+        if (dao.excluir(idTarefaExcluir)) {
+            System.out.println("Tarefa excluída com sucesso");
+        } else {
+            System.out.println("Não foi possível excluir a tarefa");
+        }
+    }
 }

@@ -19,15 +19,15 @@
 
    <plugin
          id="org.eclipse.jst.ws.jaxws.doc.user"
-         download-size="216"
-         install-size="268"
+         download-size="213"
+         install-size="231"
          version="1.0.400.v201902162216"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jst.ws.cxf.doc.user"
-         download-size="1059"
-         install-size="1204"
+         download-size="1058"
+         install-size="1186"
          version="1.0.300.v201902162149"
          unpack="false"/>
 

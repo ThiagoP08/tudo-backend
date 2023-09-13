@@ -45,22 +45,22 @@
 
    <plugin
          id="org.eclipse.jpt.jaxb.eclipselink.core"
-         download-size="521"
-         install-size="1300"
+         download-size="519"
+         install-size="1262"
          version="1.3.201.v201902121834"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jpt.jaxb.eclipselink.ui"
-         download-size="74"
-         install-size="201"
+         download-size="71"
+         install-size="153"
          version="1.4.201.v201902121834"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jpt.jaxb.eclipselink.core.schemagen"
          download-size="22"
-         install-size="34"
+         install-size="32"
          version="1.2.202.v202104080213"
          unpack="false"/>
 

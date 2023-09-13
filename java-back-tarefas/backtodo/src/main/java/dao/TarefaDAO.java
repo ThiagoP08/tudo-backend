@@ -36,6 +36,58 @@ public class TarefaDAO {
 		return resultado;
 	}
 	
+	public boolean editar(Tarefa tarefa) {
+	    boolean resultado = false;
+
+	    Connection cnx = Dao.getConexao();
+
+	    String SQL = "UPDATE tarefas SET descricao = ?, status = ? WHERE id = ?";
+
+	    PreparedStatement ps;
+
+	    try {
+	        ps = cnx.prepareStatement(SQL);
+
+	        ps.setString(1, tarefa.getDescricao());
+	        ps.setBoolean(2, tarefa.getStatus());
+	        ps.setInt(3, tarefa.getId());
+
+	        int i = ps.executeUpdate();
+
+	        resultado = i > 0;
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+
+	    return resultado;
+	}
+	
+	public boolean excluir(int id) {
+	    boolean resultado = false;
+
+	    Connection cnx = Dao.getConexao();
+
+	    String SQL = "DELETE FROM tarefas WHERE id = ?";
+
+	    PreparedStatement ps;
+
+	    try {
+	        ps = cnx.prepareStatement(SQL);
+
+	        ps.setInt(1, id);
+
+	        int i = ps.executeUpdate();
+
+	        resultado = i > 0;
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+
+	    return resultado;
+	}
+
+
+	
 	
 	
 	
