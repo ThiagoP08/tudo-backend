@@ -10,36 +10,6 @@ import java.util.List;
 import model.Tarefa;
 
 public class TarefaDAO {
-	
-	public boolean incluir(Tarefa tarefa) {
-		boolean resultado = true;
-		
-		Connection cnx = Dao.getConexao();
-		
-		String SQL = "INSERT INTO tarefas(descricao, status) VALUES(?, ?)";
-		
-		PreparedStatement ps;
-		
-		try {
-			ps = cnx.prepareStatement(SQL);
-			
-			ps.setString(1, tarefa.getDescricao());
-			ps.setBoolean(2, tarefa.getStatus());
-			
-			int i = ps.executeUpdate();
-			
-			resultado = i > 0 ? true : false;
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		return resultado;
-	}
-	
-	
-	
-	
-	
 	public List<Tarefa> listar() {
 		List<Tarefa> listaDeTarefas = new ArrayList<Tarefa>();
 		Tarefa tarefa;

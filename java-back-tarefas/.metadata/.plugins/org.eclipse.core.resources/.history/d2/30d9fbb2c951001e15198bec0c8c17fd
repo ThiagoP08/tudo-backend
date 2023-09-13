@@ -28,7 +28,7 @@ public class TarefaDAO {
 			
 			int i = ps.executeUpdate();
 			
-			resultado = i > 0 ? true : false;
+			resltado = i > 0 ? true : false;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

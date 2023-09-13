@@ -26,14 +26,10 @@ public class TarefaDAO {
 			ps.setString(1, tarefa.getDescricao());
 			ps.setBoolean(2, tarefa.getStatus());
 			
-			int i = ps.executeUpdate();
-			
-			resultado = i > 0 ? true : false;
+			int i = ps.executeUpdate()
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		return resultado;
 	}
 	
 	

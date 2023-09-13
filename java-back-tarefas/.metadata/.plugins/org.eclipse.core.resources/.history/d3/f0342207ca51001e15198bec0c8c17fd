@@ -17,16 +17,6 @@ public class App {
 		
 		
 		lista.forEach(tarefa -> System.out.println(tarefa.getDescricao()));
-		
-		Tarefa tarefa = new Tarefa();
-		tarefa.setDescricao("Estudar para a prova");
-		tarefa.setStatus(false);
-		
-		if(dao.incluir(tarefa)) {
-			System.out.println("Tarefa incuida com sucesso");
-		} else {
-			System.out.println("Tarefa não foi incluida");
-		}
 
 	}
 
