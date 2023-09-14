@@ -1,5 +1,6 @@
 INDEX VERSION 1.4+C:\Users\thiag\OneDrive\Documentos\back\tudo-backend\java-back-tarefas\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 373317406.index
+2603481175.index
 1677124584.index
 2180827497.index
 344069454.index

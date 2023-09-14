@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="service.TarefaService"%>
+<%@ page import="java.util.List"%>
+<%@ page import="model.Tarefa" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="caminho/para/seu/estilo.css">
+	</head>
+	<body>
+	
+	<h1>Tarefas</h1>
+	<%
+		TarefaService service = new TarefaService();
+	
+		List<Tarefa> lista = service.listarTarefas();
+		
+		for(Tarefa tarefa: lista){
+	%>
+			<%=tarefa.getDescricao() %>
+		
+	<%
+		}
+	%>
+	
+	</body>
+</html>

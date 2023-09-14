@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+C:\Users\51127512022.1\Documents\java\tudo-backend\java-back-tarefas\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2603481175.index
+\backtodo\src\main\java
+C:\Users\thiag\OneDrive\Documentos\back\tudo-backend\java-back-tarefas\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2603481175.index
+\backtodo\src\main\java
